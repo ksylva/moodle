@@ -13,6 +13,12 @@ jobs:
       - name: 📥 get the code
         uses: actions/checkout@v3
 
+      - name: 🔍 Debug Environnement
+        run: |
+          whoami
+          pwd
+          ls -lah
+
       - name: 🔑 Configure SSH
         run: |
           mkdir -p ~/.ssh
