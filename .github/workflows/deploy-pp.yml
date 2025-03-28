@@ -18,6 +18,12 @@ jobs:
           whoami
           pwd
           echo ~/
+          
+      - name: Afficher le hostname et DNS
+        run: |
+          echo "Hostname: $(hostname)"
+          echo "DNS Info:"
+          nslookup $(hostname)
 
       - name: 🔑 Configure SSH
         run: |
