@@ -25,6 +25,9 @@ jobs:
           echo "DNS Info:"
           nslookup $(hostname)
 
+      - name: Afficher l'IP publique
+        run: curl ifconfig.me
+
       - name: 🔑 Configure SSH
         run: |
           mkdir -p ~/.ssh
