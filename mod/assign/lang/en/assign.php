@@ -73,15 +73,18 @@ $string['assignmentduedigesthtml'] = '<p>Hi {$a->firstname},</p>
 $string['assignmentduedigestitem'] = '<strong>{$a->assignmentname}</strong> in course {$a->coursename}<br/>
 <strong>Due: {$a->duetime}</strong><br/>
 <a href="{$a->url}" aria-label="Go to {$a->assignmentname}">Go to activity</a>';
+$string['assignmentduedigestsms'] = '{$a->grader} has posted some feedback on your assignment submission for {$a->assignment}: {$a->url}';
 $string['assignmentduedigestsubject'] = 'You have assignments due in 7 days';
 $string['assignmentduesoonhtml'] = '<p>Hi {$a->firstname},</p>
 <p>The assignment <strong>{$a->assignmentname}</strong> in course {$a->coursename} is due soon.</p>
 <p><strong>Due: {$a->duedate}</strong></p>
 <p><a href="{$a->url}">Go to activity</a></p>';
+$string['assignmentduesoonsms'] = 'Your assignment {$a->assignmentname} is due on {$a->duedate}: {$a->url}';
 $string['assignmentoverduehtml'] = '<p>Hi {$a->firstname},</p>
 <p><strong>{$a->assignmentname}</strong> in course {$a->coursename} was due on <strong>{$a->duedate}</strong>.</p>
 <p>You might still be able to submit your assignment{$a->cutoffsnippet}, but your submission will be marked as late.</p>
 <p><a href="{$a->url}">Go to activity</a></p>';
+$string['assignmentoverduesms'] = 'Your assignment {$a->assignmentname} is overdue on {$a->duedate}: {$a->url}';
 $string['assignmentoverduehtmlcutoffsnippet'] = ' <strong>by {$a->cutoffdate}</strong>';
 $string['assignmentduesoonsubject'] = 'Due on {$a->duedate}: {$a->assignmentname}';
 $string['assignmentoverduesubject'] = 'Overdue: {$a->assignmentname}';
@@ -92,8 +95,7 @@ assignment submission for \'{$a->assignment}\'
 You can see it appended to your assignment submission:
 
     {$a->url}';
-$string['assignmentmailhtml'] = '<p>{$a->grader} has posted some feedback on your
-assignment submission for \'<i>{$a->assignment}</i>\'.</p>
+$string['assignmentmailhtml'] = '<p>{$a->grader} has posted some feedback on your assignment submission for \'<i>{$a->assignment}</i>\'.</p>
 <p>You can see it appended to your <a href="{$a->url}">assignment submission</a>.</p>';
 $string['assignmentmailsmall'] = '{$a->grader} has posted some feedback on your
 assignment submission for \'{$a->assignment}\' You can see it appended to your submission';
@@ -268,10 +270,10 @@ for \'{$a->assignment}\' at {$a->timeupdated}
 It is available here:
 
     {$a->url}';
-$string['gradersubmissionupdatedhtml'] = '{$a->username} has updated their assignment submission
-for <i>\'{$a->assignment}\'  at {$a->timeupdated}</i><br /><br />
+$string['gradersubmissionupdatedhtml'] = '{$a->username} has updated their assignment submission for <i>\'{$a->assignment}\'  at {$a->timeupdated}</i><br /><br />
 It is <a href="{$a->url}">available on the web site</a>.';
 $string['gradersubmissionupdatedsmall'] = '{$a->username} has updated their submission for assignment {$a->assignment}.';
+$string['gradersubmissionupdatedsms'] = '{$a->username} updated {$a->assignment}: {$a->url}';
 $string['gradeuser'] = 'Grade {$a}';
 $string['grantextension'] = 'Grant extension';
 $string['grantextensionforusers'] = 'Grant extension for {$a} students';
@@ -286,8 +288,7 @@ assignment submission for \'{$a->assignment}\'
 You can see it appended to your assignment submission:
 
     {$a->url}';
-$string['feedbackavailablehtml'] = '{$a->username} has posted some feedback on your
-assignment submission for \'<i>{$a->assignment}</i>\'<br /><br />
+$string['feedbackavailablehtml'] = '{$a->username} has posted some feedback on your assignment submission for \'<i>{$a->assignment}</i>\'<br /><br />
 You can see it appended to your <a href="{$a->url}">assignment submission</a>.';
 $string['feedbackavailablesmall'] = '{$a->username} has given feedback for assignment {$a->assignment}';
 $string['feedbackavailableanontext'] = 'You have new feedback on your
@@ -296,10 +297,11 @@ assignment submission for \'{$a->assignment}\'
 You can see it appended to your assignment submission:
 
     {$a->url}';
-$string['feedbackavailableanonhtml'] = 'You have new feedback on your
-assignment submission for \'<i>{$a->assignment}</i>\'<br /><br />
+$string['feedbackavailableanonhtml'] = 'You have new feedback on your assignment submission for \'<i>{$a->assignment}</i>\'<br /><br />
 You can see it appended to your <a href="{$a->url}">assignment submission</a>.';
 $string['feedbackavailableanonsmall'] = 'New feedback for assignment {$a->assignment}';
+$string['feedbackavailableanonsms'] = 'You have feedback on {$a->assignment}: {$a->url}';
+$string['feedbackavailablesms'] = '{$a->username} gave feedback on {$a->assignment}: {$a->url}';
 $string['feedbackplugins'] = 'Feedback plugins';
 $string['feedbackpluginforgradebook'] = 'Feedback plugin that will push comments to the gradebook';
 $string['feedbackpluginforgradebook_help'] = 'Only one assignment feedback plugin can push feedback into the gradebook.';
@@ -580,10 +582,10 @@ $string['submissioncopiedtext'] = 'You have made a copy of your previous assignm
 You can see the status of your assignment submission:
 
     {$a->url}';
-$string['submissioncopiedhtml'] = '<p>You have made a copy of your previous
-assignment submission for \'<i>{$a->assignment}</i>\'.</p>
+$string['submissioncopiedhtml'] = '<p>You have made a copy of your previous assignment submission for \'<i>{$a->assignment}</i>\'.</p>
 <p>You can see the status of your <a href="{$a->url}">assignment submission</a>.</p>';
 $string['submissioncopiedsmall'] = 'You have copied your previous assignment submission for {$a->assignment}';
+$string['submissioncopiedsms'] = 'You have copied your previous assignment submission for {$a->assignment}: {$a->url}';
 $string['submissiondrafts'] = 'Require students to click the submit button';
 $string['submissiondrafts_help'] = 'If enabled, students will have to click a submit button to declare their submission as final. This allows students to keep a draft version of the submission on the system. If this setting is changed from "No" to "Yes" after students have already submitted, those submissions will be regarded as final.';
 $string['submissioneditable'] = 'Student can edit this submission';
@@ -603,10 +605,10 @@ $string['submissionreceiptothertext'] = 'Your assignment submission for \'{$a->a
 You can see the status of your assignment submission:
 
     {$a->url}';
-$string['submissionreceiptotherhtml'] = 'Your assignment submission for
-\'<i>{$a->assignment}</i>\' has been submitted.<br /><br />
+$string['submissionreceiptotherhtml'] = 'Your assignment submission for \'<i>{$a->assignment}</i>\' has been submitted.<br /><br />
 You can see the status of your <a href="{$a->url}">assignment submission</a>.';
 $string['submissionreceiptothersmall'] = 'Your assignment submission for {$a->assignment} has been submitted.';
+$string['submissionreceiptothersms'] = 'Your submission for {$a->assignment} has been submitted: {$a->url}';
 $string['submissionreceipts'] = 'Send submission receipts';
 $string['submissionreceiptsmall'] = 'Assignment Submission Confirmation - {$a->assignment}';
 $string['submissionreceipttext'] = 'You have submitted an assignment submission for \'{$a->assignment}\'.
@@ -616,6 +618,7 @@ You can see the status of your assignment submission:
     {$a->url}
 
 {$a->submissionsummarytext}';
+$string['submissionreceiptsms'] = 'You have submitted {$a->assignment}: {$a->url}';
 $string['submissions'] = 'Submissions';
 $string['submissionslocked'] = 'This assignment is not accepting submissions';
 $string['submissionslockedshort'] = 'Submission changes not allowed';
