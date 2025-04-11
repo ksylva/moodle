@@ -28468,7 +28468,10 @@ body.dragging .dragging {
 .select-menu ul[role=group] .dropdown-item {
   padding-left: 2.5rem;
 }
-.select-menu .dropdown-item[aria-selected=true] {
+.select-menu .dropdown-item {
+  padding: 0.25rem 1.5rem;
+}
+.select-menu .dropdown-item [aria-selected=true] {
   font-weight: bold;
 }
 
@@ -33589,10 +33592,6 @@ a.ygtvspacer:hover {
   color: #fff;
   background-color: #0f6cbf;
 }
-.message-app .list-group .list-group-item:hover .badge-primary {
-  background-color: #fff;
-  color: #0f6cbf;
-}
 .message-app .list-group .list-group-item:first-child {
   border-top: 0;
 }
@@ -33942,7 +33941,7 @@ table.question-bank-table .header.checkbox .form-check {
 body.path-question-type {
   /* Hacks to display the labels within a form group. */
 }
-body.path-question-type .fitem .col-form-label.visually-hidden:not(legend):not([for=id_category]) {
+body.path-question-type .fitem .col-form-label.visually-hidden:not(legend):not([for=id_category], [for=id_filetypeslist]) {
   position: static;
   width: auto;
   height: auto;
@@ -38402,6 +38401,7 @@ body {
   right: 0;
   top: 0;
   height: 500px;
+  max-height: 80vh;
   width: 380px;
   border: 1px solid #ddd;
   transition: height 0.25s;
