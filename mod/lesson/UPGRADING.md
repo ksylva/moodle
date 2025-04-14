@@ -1,6 +1,6 @@
 # mod_lesson Upgrade notes
 
-## 5.0rc2
+## 5.0
 
 ### Removed
 
